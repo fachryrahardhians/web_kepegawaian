@@ -39,6 +39,10 @@ class AdminController extends BaseController
             return redirect()->back()->withInput()->with('errors', 'Password salah.');
         }
 
+        if ($user['isadmin'] != '1') {
+            return redirect()->back()->withInput()->with('errors', 'User Tidak Ditemukan');
+        }
+
         $session->set([
             'admin_login'   => true,
             'admin_name'    => $user['username'],

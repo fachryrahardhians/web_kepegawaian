@@ -3,7 +3,7 @@
 
 
 <div class="container mt-4">
-    <form id="pegawaiForm" class="card card-body" action="<?= base_url('/dashboard/profil/update/submit') ?>" method="post" class="space-y-4">
+    <form id="pegawaiForm" class="card card-body" action="<?= base_url('/dashboard/profil/edit/submit') ?>" method="post" class="space-y-4">
         <h4 class="mb-3">Update Data Saya</h4>
 
         <?php if (!empty($pegawai['id'])): ?>
@@ -53,6 +53,14 @@
             <div class="col-md-6 mb-3">
                 <label>Email</label>
                 <input type="email" name="email" class="form-control" required value="<?= old('', $pegawai['email'] ?? '') ?>">
+            </div>
+            <div class="col-md-6 mb-3">
+                <label for="gender">Jenis Kelamin</label>
+                <select name="gender" id="gender" class="form-control select2" required>
+                    <option value="">-- Pilih Golongan --</option>
+                    <option value="L" <?= old('gender', $pegawai['gender'] ?? '') == "L" ? 'selected' : '' ?>>Laki-laki</option>
+                    <option value="P" <?= old('gender', $pegawai['gender'] ?? '') == "P" ? 'selected' : '' ?>>Perempuan</option>
+                </select>
             </div>
         </div>
 
@@ -127,7 +135,7 @@
             </div>
         </div>
 
-        <button class="btn btn-primary mt-3" type="submit">Simpan</button>
+        <button class="btn btn-primary mt-3 " type="submit">Simpan</button>
     </form>
 </div>
 

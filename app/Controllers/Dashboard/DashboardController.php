@@ -15,17 +15,7 @@ class DashboardController extends BaseController
 {
     public function index()
     {
-        $this->requireLogin();
-        $data = [
-
-            'nama' => session('nama'),
-            'nip' => session('nip'),
-            'email' => session('email'),
-            'no_wa' => session('no_wa'),
-
-        ];
-
-        return view('dashboard/utama/data_saya', ['pegawai' => $data]);
+        return view('dashboard/pages/utama/welcome');
     }
 
     public function utama()
@@ -142,6 +132,35 @@ class DashboardController extends BaseController
         ];
 
         return view('dashboard/pages/profile/form_edit_profile', $data);
+    }
+
+    public function submitEditProfile()
+    {
+        // $randomid = bin2hex(random_bytes(16));
+        $pegawaiModel = new PegawaiModel();
+        $id = session()->get('user_id');
+        $isRangkapJabatan = $this->request->getPost('toggleRangkap');
+
+        $data = [
+            'nama' => $this->request->getPost('nama_lengkap'),
+            'nip' => $this->request->getPost('nip'),
+            'golongan' => $this->request->getPost('golongan'),
+            'no_wa' => $this->request->getPost('wa'),
+            'email' => $this->request->getPost('email'),
+            'gender' => $this->request->getPost('gender'),
+            'jabatan_id' => $this->request->getPost('jabatan_utama'),
+            'bidang_id' => $this->request->getPost('bidang_utama'),
+            'tim_id' => $this->request->getPost('tim_utama') ?? 0,
+            'ppk_id' => $this->request->getPost('ppk_utama') ?? 0,
+            'jabatan_rangkap_id' => $isRangkapJabatan ? $this->request->getPost('jabatan_rangkap') : 0,
+            'bidang_rangkap_id' => $isRangkapJabatan ? $this->request->getPost('bidang_rangkap') : 0,
+            'tim_rangkap_id' => $isRangkapJabatan ? $this->request->getPost('tim_rangkap') : 0,
+            'ppk_rangkap_id' => $isRangkapJabatan ? $this->request->getPost('ppk_rangkap') : 0,
+        ];
+
+        $pegawaiModel->update($id, $data);
+
+        return redirect()->to('dashboard/profil');
     }
 
     protected function requireLogin()

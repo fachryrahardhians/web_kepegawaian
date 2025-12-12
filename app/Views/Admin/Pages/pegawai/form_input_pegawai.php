@@ -159,37 +159,37 @@
                 $('#jabatanRangkapSection').toggle(1);
                 $('#toggleRangkap').prop('checked', true);
 
-                if (satker_ids.includes(parseInt(old_tim_rangkap_id))) {
-                    // jika termasuk satker, kemudian cari ppk
-                    fetchOptionsWithTim(old_tim_rangkap_id, '#ppk_rangkap', '<?= base_url("admin/pegawai/getPpk") ?>', old_ppk_rangkap);
-                } else {
-                    nulifyOption('#ppk_rangkap');
-                }
-
-                if (bidang_kpi_id == old_bidang_rangkap_id) {
-                    fetchOptions(old_bidang_rangkap_id, '#tim_rangkap', '<?= base_url("admin/pegawai/getTim") ?>', old_tim_rangkap);
-                    fetchOptionsWithTim(0, '#ppk_rangkap', '<?= base_url("admin/pegawai/getPpk") ?>', old_ppk_rangkap);
-                } else {
-                    fetchOptions(old_bidang_rangkap_id, '#tim_rangkap', '<?= base_url("admin/pegawai/getTim") ?>', old_tim_rangkap);
-                    nulifyOption('#ppk_rangkap');
-                }
-            }
-
-
-            if (satker_ids.includes(parseInt(old_tim_id))) {
+                // if (satker_ids.includes(parseInt(old_tim_rangkap_id))) {
                 // jika termasuk satker, kemudian cari ppk
-                fetchOptionsWithTim(old_tim_id, '#ppk_utama', '<?= base_url("admin/pegawai/getPpk") ?>', old_ppk);
-            } else {
-                nulifyOption('#ppk_utama');
+                fetchOptionsWithTim(old_tim_rangkap_id, '#ppk_rangkap', '<?= base_url("admin/pegawai/getPpk") ?>', old_ppk_rangkap);
+                // } else {
+                //     nulifyOption('#ppk_rangkap');
+                // }
+
+                // if (bidang_kpi_id == old_bidang_rangkap_id) {
+                fetchOptions(old_bidang_rangkap_id, '#tim_rangkap', '<?= base_url("admin/pegawai/getTim") ?>', old_tim_rangkap);
+                fetchOptionsWithTim(0, '#ppk_rangkap', '<?= base_url("admin/pegawai/getPpk") ?>', old_ppk_rangkap);
+                // } else {
+                //     fetchOptions(old_bidang_rangkap_id, '#tim_rangkap', '<?= base_url("admin/pegawai/getTim") ?>', old_tim_rangkap);
+                //     nulifyOption('#ppk_rangkap');
+                // }
             }
 
-            if (bidang_kpi_id == old_bidang_id) {
-                fetchOptions(old_bidang_id, '#tim_utama', '<?= base_url("admin/pegawai/getTim") ?>', old_tim);
-                fetchOptionsWithTim(old_tim_id, '#ppk_utama', '<?= base_url("admin/pegawai/getPpk") ?>', old_ppk);
-            } else {
-                fetchOptions(old_bidang_id, '#tim_utama', '<?= base_url("admin/pegawai/getTim") ?>', old_tim);
-                nulifyOption('#ppk_utama');
-            }
+
+            // if (satker_ids.includes(parseInt(old_tim_id))) {
+            // jika termasuk satker, kemudian cari ppk
+            fetchOptionsWithTim(old_tim_id, '#ppk_utama', '<?= base_url("admin/pegawai/getPpk") ?>', old_ppk);
+            // } else {
+            //     nulifyOption('#ppk_utama');
+            // }
+
+            // if (bidang_kpi_id == old_bidang_id) {
+            fetchOptions(old_bidang_id, '#tim_utama', '<?= base_url("admin/pegawai/getTim") ?>', old_tim);
+            fetchOptionsWithTim(old_tim_id, '#ppk_utama', '<?= base_url("admin/pegawai/getPpk") ?>', old_ppk);
+            // } else {
+            //     fetchOptions(old_bidang_id, '#tim_utama', '<?= base_url("admin/pegawai/getTim") ?>', old_tim);
+            //     nulifyOption('#ppk_utama');
+            // }
 
 
         });
@@ -269,24 +269,24 @@
         });
 
         $('#tim_utama').on('change', function() {
-            const id = $(this).val();
-            if (satker_ids.includes(parseInt(id))) {
-                // jika termasuk satker, kemudian cari ppk
-                fetchOptionsWithTim(id, '#ppk_utama', '<?= base_url("admin/pegawai/getPpk") ?>', null);
-            } else {
-                nulifyOption('#ppk_utama');
-            }
+            // const id = $(this).val();
+            // if (satker_ids.includes(parseInt(id))) {
+            // jika termasuk satker, kemudian cari ppk
+            fetchOptionsWithTim(id, '#ppk_utama', '<?= base_url("admin/pegawai/getPpk") ?>', null);
+            // } else {
+            // nulifyOption('#ppk_utama');
+            // }
 
         });
 
         $('#tim_rangkap').on('change', function() {
-            const id = $(this).val();
-            if (satker_ids.includes(parseInt(id))) {
-                // jika termasuk satker, kemudian cari ppk
-                fetchOptionsWithTim(id, '#ppk_rangkap', '<?= base_url("admin/pegawai/getPpk") ?>', null);
-            } else {
-                nulifyOption('#ppk_rangkap');
-            }
+            // const id = $(this).val();
+            // if (satker_ids.includes(parseInt(id))) {
+            // jika termasuk satker, kemudian cari ppk
+            fetchOptionsWithTim(id, '#ppk_rangkap', '<?= base_url("admin/pegawai/getPpk") ?>', null);
+            // } else {
+            // nulifyOption('#ppk_rangkap');
+            // }        
         });
 
         $('#toggleRangkap').on('change', function() {

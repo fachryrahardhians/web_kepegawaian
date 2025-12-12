@@ -26,8 +26,10 @@ class Database extends Config
      */
     public array $default = [
         'DSN'          => '',
-        'hostname'     => '172.16.12.146',
-        'username'     => 'root',
+        /*'hostname'     => '172.16.12.146',*/
+        'hostname'     => 'localhost',
+        // 'username'     => 'root',
+        'username'     => '',
         'password'     => '',
         'database'     => 'learndb',
         'DBDriver'     => 'MySQLi',

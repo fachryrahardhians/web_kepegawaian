@@ -12,7 +12,7 @@ $routes->get('/login', 'Auth\AuthController::login');
 $routes->post('/login/submit', 'Auth\AuthController::actionLogin');
 // $routes->get('/register', 'Auth\AuthController::registration');
 // $routes->post('/register/submit', 'Auth\AuthController::actionRegister');
-$routes->get('/registrasi', 'Auth\AuthController::registrasi');
+$routes->get('/register', 'Auth\AuthController::registrasi');
 $routes->post('/registrasi/submit', 'Auth\AuthController::submitRegistrasi');
 $routes->get('/logout', 'Dashboard\DashboardController::logout');
 

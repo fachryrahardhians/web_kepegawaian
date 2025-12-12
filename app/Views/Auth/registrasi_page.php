@@ -200,8 +200,8 @@
     <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 
     <script>
-        const satker_ids = <?= json_encode($satker_ids) ?>;
-        const bidang_kpi_id = <?= json_encode($bidang_kpi_id) ?>;
+        // const satker_ids = <?= json_encode($satker_ids) ?>;
+        // const bidang_kpi_id = <?= json_encode($bidang_kpi_id) ?>;
 
 
         function togglePassword() {
@@ -282,45 +282,45 @@
 
             $('#bidang_utama').on('change', function() {
                 const id = $(this).val();
-                if (bidang_kpi_id == id) {
-                    fetchOptions(id, '#tim_utama', '<?= base_url("api/get/tim") ?>');
-                    fetchOptionsWithTim(0, '#ppk_utama', '<?= base_url("api/get/ppk") ?>');
-                } else {
-                    fetchOptions(id, '#tim_utama', '<?= base_url("api/get/tim") ?>');
-                    nulifyOption('#ppk_utama');
-                }
+                // if (bidang_kpi_id == id) {
+                //     fetchOptions(id, '#tim_utama', '<?= base_url("api/get/tim") ?>');
+                //     fetchOptionsWithTim(0, '#ppk_utama', '<?= base_url("api/get/ppk") ?>');
+                // } else {
+                fetchOptions(id, '#tim_utama', '<?= base_url("api/get/tim") ?>');
+                nulifyOption('#ppk_utama');
+                // }
             });
 
             $('#bidang_rangkap').on('change', function() {
                 const id = $(this).val();
-                if (bidang_kpi_id == id) {
-                    fetchOptions(id, '#tim_rangkap', '<?= base_url("api/get/tim") ?>');
-                    fetchOptionsWithTim(0, '#ppk_rangkap', '<?= base_url("api/get/ppk") ?>');
-                } else {
-                    fetchOptions(id, '#tim_rangkap', '<?= base_url("api/get/tim") ?>');
-                    nulifyOption('#ppk_rangkap');
-                }
+                // if (bidang_kpi_id == id) {
+                //     fetchOptions(id, '#tim_rangkap', '<?= base_url("api/get/tim") ?>');
+                //     fetchOptionsWithTim(0, '#ppk_rangkap', '<?= base_url("api/get/ppk") ?>');
+                // } else {
+                fetchOptions(id, '#tim_rangkap', '<?= base_url("api/get/tim") ?>');
+                nulifyOption('#ppk_rangkap');
+                // }
             });
 
             $('#tim_utama').on('change', function() {
                 const id = $(this).val();
-                if (satker_ids.includes(parseInt(id))) {
-                    // jika termasuk satker, kemudian cari ppk
-                    fetchOptionsWithTim(id, '#ppk_utama', '<?= base_url("api/get/ppk") ?>');
-                } else {
-                    nulifyOption('#ppk_utama');
-                }
+                // if (satker_ids.includes(parseInt(id))) {
+                // jika termasuk satker, kemudian cari ppk
+                fetchOptionsWithTim(id, '#ppk_utama', '<?= base_url("api/get/ppk") ?>');
+                // } else {
+                //     nulifyOption('#ppk_utama');
+                // }
 
             });
 
             $('#tim_rangkap').on('change', function() {
                 const id = $(this).val();
-                if (satker_ids.includes(parseInt(id))) {
-                    // jika termasuk satker, kemudian cari ppk
-                    fetchOptionsWithTim(id, '#ppk_rangkap', '<?= base_url("api/get/ppk") ?>');
-                } else {
-                    nulifyOption('#ppk_rangkap');
-                }
+                // if (satker_ids.includes(parseInt(id))) {
+                // jika termasuk satker, kemudian cari ppk
+                fetchOptionsWithTim(id, '#ppk_rangkap', '<?= base_url("api/get/ppk") ?>');
+                // } else {
+                //     nulifyOption('#ppk_rangkap');
+                // }
             });
 
             $('#toggleRangkap').on('change', function() {
