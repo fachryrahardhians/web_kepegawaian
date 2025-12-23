@@ -90,6 +90,16 @@ $routes->group(
         $routes->delete('log/delete/(:any)', 'Api\ApiController::deleteLogKerja/$1', ['filter' => 'auth']);
         $routes->delete('log/delete/lampiran/(:any)', 'Api\ApiController::hapusFileBuktiDukung/$1', ['filter' => 'auth']);
         $routes->get('log/view/lampiran/(:any)', 'Api\ApiController::bukaFileBuktiDukung/$1', ['filter' => 'auth']);
+
+        //api - routes - after - migration - to - vanilla js 
+        $routes->group(
+            'auth',
+            function ($routes) {
+                $routes->post('user/login', 'Api\AuthApi::login');
+                $routes->post('user/logout', 'Api\AuthApi::userLogout');
+                $routes->post('user/register', 'Api\AuthApi::userRegister');
+            }
+        );
     }
 );
 $routes->get('/test-db', function () {
