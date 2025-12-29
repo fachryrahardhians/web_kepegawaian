@@ -20,7 +20,7 @@ document.getElementById("loginForm").addEventListener("submit", function (e) {
       }
 
       localStorage.setItem("token", res.token);
-      window.location.href = "/desbor";
+      window.location.href = "/dashboard";
     })
     .catch(() => {
       hideLoading();

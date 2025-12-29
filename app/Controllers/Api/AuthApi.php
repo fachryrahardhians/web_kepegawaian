@@ -9,6 +9,7 @@ class AuthApi extends BaseController
 {
     public function login()
     {
+        $session = Session();
         $username = $this->request->getPost('username');
         $password = $this->request->getPost('password');
 
@@ -47,6 +48,10 @@ class AuthApi extends BaseController
             'username'   => $user['username']
         ]);
 
+
+        $session->set([
+            'logged_in'    => true,
+        ]);
         return $this->response->setJSON([
             'status' => true,
             'message' => 'Login Berhasil',

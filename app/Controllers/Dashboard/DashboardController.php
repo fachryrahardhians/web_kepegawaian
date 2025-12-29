@@ -15,7 +15,7 @@ class DashboardController extends BaseController
 {
     public function index()
     {
-        return view('dashboard/pages/utama/welcome');
+        return view('dashboards/dashboard', ['title' => 'Dashboard']);
     }
 
     public function utama()
