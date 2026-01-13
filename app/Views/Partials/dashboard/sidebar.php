@@ -1,154 +1,104 @@
 <aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme">
+    <div class="menu-1 menu menu-vertical bg-menu-theme py-4 overflow-hidden" id="menu-1">
+        <div class="app-brand demo px-6 ms-2">
+            <a href="javascript:void(0)" class="app-brand-text menu-1-toggle-collapsed demo menu-text fw-bold">BBWS Bengawan Solo</a>
+        </div>
+        <a href="javascript:void(0);" class="layout-menu-toggle menu-link text-large ms-auto">
+            <i class="icon-base bx bx-chevron-left"></i>
+        </a>
+        <div class="menu-divider mt-0  ">
+        </div>
 
-    <div class="menu menu-vertical bg-menu-theme py-4 overflow-hidden" id="menu-1">
         <ul class="menu-inner">
-            <li class="menu-item">
-                <a class="menu-link menu-toggle" href="javascript:void(0)"><i class="menu-icon bx bx-home-circle"></i>
-                    <div>
-                        Dashboards
-                    </div>
-                </a>
-                <ul class="menu-sub">
-                    <li class="menu-item">
-                        <a class="menu-link" href="javascript:void(0)">
-                            <div>
-                                Dashboard 1
-                            </div>
-                        </a>
-                    </li>
-                    <li class="menu-item">
-                        <a class="menu-link" href="javascript:void(0)">
-                            <div>
-                                Dashboard 2
-                            </div>
-                        </a>
-                    </li>
-                    <li class="menu-item">
-                        <a class="menu-link" href="javascript:void(0)">
-                            <div>
-                                Dashboard 3
-                            </div>
-                        </a>
-                    </li>
-                </ul>
-            </li>
-            <li class="menu-item">
-                <a class="menu-link menu-toggle" href="javascript:void(0)"><i class="menu-icon bx bx-dock-top"></i>
-                    <div>
-                        Pages
-                    </div>
-                </a>
-                <ul class="menu-sub">
-                    <li class="menu-item">
-                        <a class="menu-link" href="javascript:void(0)">
-                            <div>
-                                Account Settings
-                            </div>
-                        </a>
-                    </li>
-                    <li class="menu-item">
-                        <a class="menu-link menu-toggle" href="javascript:void(0)">
-                            <div>
-                                Users
-                            </div>
-                        </a>
-                        <ul class="menu-sub">
-                            <li class="menu-item">
-                                <a class="menu-link" href="javascript:void(0)">
-                                    <div>
-                                        List
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="menu-item">
-                                <a class="menu-link" href="javascript:void(0)">
-                                    <div>
-                                        View
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="menu-item">
-                                <a class="menu-link" href="javascript:void(0)">
-                                    <div>
-                                        Edit
-                                    </div>
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="menu-item">
-                        <a class="menu-link menu-toggle" href="javascript:void(0)">
-                            <div>
-                                Authentication
-                            </div>
-                        </a>
-                        <ul class="menu-sub">
-                            <li class="menu-item">
-                                <a class="menu-link" href="javascript:void(0)">
-                                    <div>
-                                        Login
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="menu-item">
-                                <a class="menu-link" href="javascript:void(0)">
-                                    <div>
-                                        Register
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="menu-item">
-                                <a class="menu-link" href="javascript:void(0)">
-                                    <div>
-                                        Forgot Password
-                                    </div>
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-            </li>
             <li class="menu-item active">
-                <a class="menu-link" href="javascript:void(0)"><i class="menu-icon bx bx-envelope"></i>
+                <a class="menu-link" href="javascript:void(0)"><i class="menu-icon bx bxs-dashboard"></i>
                     <div>
-                        Email
+                        Dashboard
                     </div>
                 </a>
             </li>
             <li class="menu-item">
-                <a class="menu-link" href="javascript:void(0)"><i class="menu-icon bx bx-message-square"></i>
+                <a class="menu-link" href="javascript:void(0)"><i class="menu-icon bx bx-user-circle"></i>
                     <div>
-                        Chat
+                        Profil
                     </div>
                 </a>
             </li>
             <li class="menu-item">
-                <a class="menu-link" href="javascript:void(0)"><i class="menu-icon bx bx-task"></i>
+                <a class="menu-link menu-toggle" href="javascript:void(0)"><i class="menu-icon bx bx-briefcase-alt-2"></i>
                     <div>
-                        Todo
+                        Aktivitas
                     </div>
                 </a>
+                <ul class="menu-sub">
+                    <li class="menu-item">
+                        <a class="menu-link" href="javascript:void(0)">
+                            <div>
+                                Aktivitas Saya
+                            </div>
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a class="menu-link" href="javascript:void(0)">
+                            <div>
+                                Aktivitas Anggota
+                            </div>
+                        </a>
+                    </li>
+                </ul>
             </li>
             <li class="menu-item">
-                <a class="menu-link" href="javascript:void(0)"><i class="menu-icon bx bx-calendar"></i>
+                <a class="menu-link menu-toggle" href="javascript:void(0)"><i class="menu-icon bx bx-paper-plane"></i>
                     <div>
-                        Calendar
+                        Bangkom
                     </div>
                 </a>
+                <ul class="menu-sub">
+                    <li class="menu-item">
+                        <a class="menu-link" href="javascript:void(0)">
+                            <div>
+                                Sertifikasi Keahlian
+                            </div>
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a class="menu-link" href="javascript:void(0)">
+                            <div>
+                                Diklat
+                            </div>
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a class="menu-link" href="javascript:void(0)">
+                            <div>
+                                Seminar
+                            </div>
+                        </a>
+                    </li>
+                </ul>
             </li>
             <li class="menu-item">
-                <a class="menu-link" href="javascript:void(0)"><i class="menu-icon bx bx-grid-alt"></i>
+                <a class="menu-link menu-toggle" href="javascript:void(0)"><i class="menu-icon bx bx-group"></i>
                     <div>
-                        Kanban
+                        Kepegawaian
                     </div>
                 </a>
-            </li>
-            <li class="menu-item">
-                <a class="menu-link" href="javascript:void(0)"><i class="menu-icon bx bx-receipt"></i>
-                    <div>
-                        Invoice
-                    </div>
-                </a>
+                <ul class="menu-sub">
+                    <li class="menu-item">
+                        <a class="menu-link" href="javascript:void(0)">
+                            <div>
+                                Bukti Dukung Bravo
+                            </div>
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a class="menu-link menu-toggle" href="javascript:void(0)">
+                            <div>
+                                Survey Kepuasan Kepegawaian
+                            </div>
+                        </a>
+                    </li>
+                </ul>
             </li>
         </ul>
     </div>
